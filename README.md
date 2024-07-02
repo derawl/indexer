@@ -7,7 +7,6 @@ This is an indexer for Transfer events on the Ethereum blockchain. It indexes al
 The configuration file is located at `config/default.json`. The configuration file contains the following fields:
 
 ### Naming conventions
-
 - Token Symbol: i The symbol of the ERC20 token to index (e.g. DAI, USDC, etc) is denoted in capital letters.
 - Table Names: The table names are in mixed case letters with the token symbol in capital letters and the type of event in proper case separated by underscores (e.g. `USDC_Transfer`, `USDC_Balances`, etc).
 
