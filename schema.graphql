@@ -1,0 +1,33 @@
+type EventsSummary {
+  id: ID!
+  DAI_Transfer: [DAI_Transfer!]! @derivedFrom(field: "eventsSummary")
+  dAI_TransferCount: BigInt!
+  USDC_Transfer: [USDC_Transfer!]! @derivedFrom(field: "eventsSummary")
+  uSDC_TransferCount: BigInt!
+  USDT_Transfer: [USDT_Transfer!]! @derivedFrom(field: "eventsSummary")
+  uSDT_TransferCount: BigInt!
+}
+
+type DAI_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  value: BigInt!
+  eventsSummary: String!
+}
+
+type USDC_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  value: BigInt!
+  eventsSummary: String!
+}
+
+type USDT_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  value: BigInt!
+  eventsSummary: String!
+}

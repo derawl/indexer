@@ -1,0 +1,28 @@
+name: indexer-thirdguard
+networks:
+  - id: 1
+    maxNumRetries: 5
+    start_block: 0
+    end_block: null
+    contracts:
+      - name: USDC
+        address:
+          - 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+        handler: src/EventHandlers.ts
+        events:
+          - event: Transfer(address indexed from, address indexed to, uint256 value)
+            isAsync: true
+      - name: DAI
+        address:
+          - 0x6B175474E89094C44Da98b954EedeAC495271d0F
+        handler: src/EventHandlers.ts
+        events:
+          - event: Transfer(address indexed src, address indexed dst, uint256 wad)
+            isAsync: true
+      - name: USDT
+        address:
+          - 0xdAC17F958D2ee523a2206206994597C13D831ec7
+        handler: src/EventHandlers.ts
+        events:
+          - event: Transfer(address indexed from, address indexed to, uint256 value)
+            isAsync: true
