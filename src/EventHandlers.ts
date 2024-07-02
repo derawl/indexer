@@ -20,6 +20,9 @@ const INITIAL_EVENTS_SUMMARY: EventsSummaryEntity = {
   uSDT_TransferCount: BigInt(0),
 };
 
+/**
+ * This function is called when the indexer is started.
+ */
 DAIContract.Transfer.loader(({ event, context }) => {
   context.EventsSummary.load(GLOBAL_EVENTS_SUMMARY_KEY);
 });
